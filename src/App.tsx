@@ -174,26 +174,26 @@ function App() {
             <span className="text-xs text-[#5d5d5d]">Get real-time insights, seamless transactions, and advanced</span>
             <span className="text-xs text-[#5d5d5d]">tools to manage your wealth effortlessly.</span>
             <div className="self-stretch lg:flex justify-between items-center gap-8 mt-8 border-2">
-              <div className="flex flex-col justify-center items-center gap-3">
-                <div className="h-60 w-75 bg-[#394508] rounded-lg flex justify-center items-center cursor-pointer hover:-translate-y-3 transition duration-500 \">
+              <div className="lg:w-1/4 flex flex-col justify-center items-center gap-3">
+                <div className="w-full bg-[#394508] max-h-60 max-w-75 rounded-lg flex justify-center items-center cursor-pointer hover:-translate-y-3 transition duration-500 \">
                   <div className="w-20 h-17 border-2 border-[#d1fc9c] rounded-lg"></div>
                 </div>
                 <span className="text-xs font-medium">Safe Storage</span>
               </div>
-              <div className="flex flex-col justify-center items-center gap-3">
-                <div className="h-60 w-75 bg-[#394508] rounded-lg flex justify-center items-center cursor-pointer hover:-translate-y-3 transition duration-500 \">
+              <div className="lg:w-1/4 flex flex-col justify-center items-center gap-3">
+                <div className="w-full bg-[#394508] max-h-60 max-w-75 rounded-lg flex justify-center items-center cursor-pointer hover:-translate-y-3 transition duration-500 \">
                   <div className="w-20 h-17 border-2 border-[#d1fc9c] rounded-lg"></div>
                 </div>
                 <span className="text-xs font-medium">Safe Storage</span>
               </div>
-              <div className="flex flex-col justify-center items-center gap-3">
-                <div className="h-60 w-75 bg-[#394508] rounded-lg flex justify-center items-center cursor-pointer hover:-translate-y-3 transition duration-500 \">
+              <div className="lg:w-1/4 flex flex-col justify-center items-center gap-3">
+                <div className="w-full bg-[#394508] max-h-60 max-w-75 rounded-lg flex justify-center items-center cursor-pointer hover:-translate-y-3 transition duration-500 \">
                   <div className="w-20 h-17 border-2 border-[#d1fc9c] rounded-lg"></div>
                 </div>
                 <span className="text-xs font-medium">Safe Storage</span>
               </div>
-              <div className="flex flex-col justify-center items-center gap-3">
-                <div className="h-60 w-75 bg-[#394508] rounded-lg flex justify-center items-center cursor-pointer hover:-translate-y-3 transition duration-500 \">
+              <div className="lg:w-1/4 flex flex-col justify-center items-center gap-3">
+                <div className="w-full bg-[#394508] max-h-60 max-w-75 rounded-lg flex justify-center items-center cursor-pointer hover:-translate-y-3 transition duration-500 \">
                   <div className="w-20 h-17 border-2 border-[#d1fc9c] rounded-lg"></div>
                 </div>
                 <span className="text-xs font-medium">Safe Storage</span>

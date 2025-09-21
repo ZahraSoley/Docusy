@@ -1,11 +1,19 @@
 import { Button } from "@/components/ui/button"
+import { useMediaQuery } from "react-responsive";
+
 
 function App() {
-  return (
-    <div className="flex">
 
-      <div className="w-1/3 sticky top-0 bg-[#384408] h-screen">
-        <div className="pt-5 pl-8 pr-16 flex flex-col gap-10">
+  const isMobile = useMediaQuery({ maxWidth: 640 });
+  const isTablet = useMediaQuery({ minWidth: 641, maxWidth: 1023 });
+  const isDesktop = useMediaQuery({ minWidth: 1024 });
+
+  return (
+    <div className="flex flex-col lg:flex-row bg-[#384408] ">
+
+      <div className="box-border w-full lg:flex-[1_1_25%] lg:max-w-2/5 lg:sticky top-0 py-5 px-5 mb-2 lg:px-10 lg:pr-15 lg:mr-15 lg:h-screen">
+
+        <div className=" flex flex-col gap-10">
           <nav className="flex justify-between">
             <div className="flex items-center gap-3">
               <div className="w-7 h-7 rounded-full bg-white"></div>
@@ -15,8 +23,8 @@ function App() {
           </nav>
           <div className="flex flex-col gap-4 self-stretch">
             <div>
-              <span className="flex-1 text-4xl text-white">Organizing Documents Made</span>
-              <span className="text-4xl ml-2 text-[#d2fd9c]">Simple</span>
+              <span className="flex-1 text-3xl lg:text-4xl text-white">Organizing Documents Made</span>
+              <span className="text-3xl lg:text-4xl ml-2 text-[#d2fd9c]">Simple</span>
             </div>
             <span className="text-[#cbcbcb]">keep and scan your documents offline</span>
           </div>
@@ -53,92 +61,102 @@ function App() {
             <li className="text-[#d2fd9c] text-xs font-medium hover:underline cursor-pointer">Legal Terms</li>
           </ul>
         </div>
+
       </div>
 
-      <div className="w-2/3">
+      <div className="w-full lg:flex-[1_1_75%] lg:min-w-[60%] bg-white">
 
         <div className="self-stretch flex flex-col justify-center items-center gap-10">
 
-          <div className="self-stretch flex flex-col justify-center items-center gap-10 m-10 border-2 border-amber-200">
+          <div className="self-stretch flex flex-col justify-center items-center m-5 lg:m-10 border-2 border-amber-200">
             <div className="self-stretch relative">
-              <div className="w-full h-100 bg-zinc-600 rounded-3xl"></div>
-              <div className="absolute bg-[#a5bd88] w-45 h-13 rounded-full opacity-90 flex items-center top-20 left-7">
-                <div className="w-10 h-10 bg-[#d2fd9c] rounded-full opacity-100 ml-2"></div>
-                <span className="text-white ml-2">some text here!</span>
+              <div className="w-full h-60 lg:h-160 bg-zinc-600 rounded-3xl"></div>
+              {/* *************************************************************************** */}
+              <div className="hidden lg:block absolute bg-[#8596760 w-75 h-20 rounded-full opacity-90 flex items-center top-40 left-15">
+                <div className="w-15 h-15 bg-[#d2fd9c] rounded-full opacity-100 ml-2"></div>
+                <span className="text-2xl text-white ml-2">some text here!</span>
               </div>
-              <div className="absolute bg-[#a5bd88] w-45 h-13 rounded-full opacity-90 flex items-center top-7 right-10">
-                <div className="w-10 h-10 bg-[#d2fd9c] rounded-full opacity-100 ml-2"></div>
-                <span className="text-white ml-2">some text here!</span>
+              <div className="hidden lg:block  absolute bg-[#8596760 w-75 h-20 rounded-full opacity-90 flex items-center top-20 right-20">
+                <div className="w-15 h-15 bg-[#d2fd9c] rounded-full opacity-100 ml-2"></div>
+                <span className="text-2xl text-white ml-2">some text here!</span>
               </div>
-              <div className="absolute bg-[#a5bd88] w-45 h-13 rounded-full opacity-90 flex items-center bottom-15 left-40">
-                <div className="w-10 h-10 bg-[#d2fd9c] rounded-full opacity-100 ml-2"></div>
-                <span className="text-white ml-2">some text here!</span>
+              <div className="hidden lg:block absolute bg-[#8596760 w-75 h-20 rounded-full opacity-90 flex items-center bottom-20 left-100">
+                <div className="w-15 h-15 bg-[#d2fd9c] rounded-full opacity-100 ml-2"></div>
+                <span className="text-2xl text-white ml-2">some text here!</span>
               </div>
             </div>
-            <div className="flex flex-col items-center justify-center">
-              <span className="text-xl">we do something very good </span>
-              <span className="text-xl mt-[-5px]">and excelent</span>
-            </div>
-            <ul className="flex gap-8 list-none text-[#619111] pt-2">
-              <li className="flex items-center justify-center gap-1">
-                <div className="w-4 h-4 rounded-full bg-[#619111]"></div>
-                <span>some thing</span>
-              </li>
-              <li className="flex items-center justify-center gap-1">
-                <div className="w-4 h-4 rounded-full bg-[#619111]"></div>
-                <span>some thing</span>
-              </li>
-              <li className="flex items-center justify-center gap-1">
-                <div className="w-4 h-4 rounded-full bg-[#619111]"></div>
-                <span>some thing</span>
-              </li>
-              <li className="flex items-center justify-center gap-1">
-                <div className="w-4 h-4 rounded-full bg-[#619111]"></div>
-                <span>some thing</span>
-              </li>
-              <li className="flex items-center justify-center gap-1">
-                <div className="w-4 h-4 rounded-full bg-[#619111]"></div>
-                <span>some thing</span>
-              </li>
-            </ul>
+            {isMobile || isTablet ?
+              <div className="flex flex-col gap-10 mt-5">
+                <div className="flex flex-col items-center justify-center">
+                  <span className="text-xl">we do something very good </span>
+                  <span className="text-xl mt-[-5px]">and excelent</span>
+                </div>
+                <div className="flex flex-col justify-center items-center gap-8 lg:grid-cols-5 list-none text-[#619111] pt-2">
+                  <div className="flex gap-3">
+                    <li className="flex items-center justify-center gap-1">
+                      <div className="w-4 h-4 rounded-full bg-[#619111]"></div>
+                      <span>some thing</span>
+                    </li>
+                    <li className="flex items-center justify-center gap-1">
+                      <div className="w-4 h-4 rounded-full bg-[#619111]"></div>
+                      <span>some thing</span>
+                    </li>
+                  </div>
+                  <div className="flex gap-3">
+                    <li className="flex items-center justify-center gap-1">
+                      <div className="w-4 h-4 rounded-full bg-[#619111]"></div>
+                      <span>some thing</span>
+                    </li>
+                    <li className="flex items-center justify-center gap-1">
+                      <div className="w-4 h-4 rounded-full bg-[#619111]"></div>
+                      <span>some thing</span>
+                    </li>
+                    <li className="flex items-center justify-center gap-1">
+                      <div className="w-4 h-4 rounded-full bg-[#619111]"></div>
+                      <span>some thing</span>
+                    </li>
+                  </div>
+                </div>
+              </div>
+              : null}
           </div>
 
-          <div className="self-stretch flex flex-col items-center justify-center m-10 border-2 border-amber-200">
-            <span className="text-[40px] text-[#394508]">Get more done in a week</span>
-            <span className="text-xs text-[#5d5d5d]">Maximize your productivity with smarter tools designed to streamline </span>
-            <span className="text-xs text-[#5d5d5d]">your workflow to automate tasks, stay organized</span>
-            <div className="self-stretch grid grid-cols-2 gap-4 mt-7">
-              <div className="h-50 bg-[#d2fd9c] rounded-lg flex flex-col justify-center items-center gap-5">
+          <div className="self-stretch flex flex-col items-center justify-center m-5 lg:m-10 lg:mt-0 border-2 border-amber-200">
+            <span className="text-3xl lg:text-5xl text-[#394508] mb-3">Get more done in a week</span>
+            <span className="text-xs text-[#5d5d5d]">Maximize your productivity with smarter tools designed to </span>
+            <span className="text-xs text-[#5d5d5d]">streamline your workflow to automate tasks, stay organized</span>
+            <div className="lg:w-3/4 grid lg:grid-cols-2 w-full gap-4 mt-7">
+              <div className="h-55 bg-[#d2fd9c] rounded-lg flex flex-col justify-center items-center gap-5">
                 <div className="h-20 w-30 rounded-full bg-[#394508]"></div>
                 <span className="text-[#394508] mb-[-25px]">some random text</span>
               </div>
-              <div className="h-50 bg-[#d2fd9c] rounded-lg flex flex-col justify-center items-center gap-5">
+              <div className="h-55 bg-[#d2fd9c] rounded-lg flex flex-col justify-center items-center gap-5">
                 <div className="h-20 w-30 rounded-full bg-[#394508]"></div>
                 <span className="text-[#394508] mb-[-25px]">some random text</span>
               </div>
-              <div className="h-50 bg-[#d2fd9c] rounded-lg flex flex-col justify-center items-center gap-5">
+              <div className="h-55 bg-[#d2fd9c] rounded-lg flex flex-col justify-center items-center gap-5">
                 <div className="h-20 w-30 rounded-full bg-[#394508]"></div>
                 <span className="text-[#394508] mb-[-25px]">some random text</span>
               </div>
-              <div className="h-50 bg-[#d2fd9c] rounded-lg flex flex-col justify-center items-center gap-5">
+              <div className="h-55 bg-[#d2fd9c] rounded-lg flex flex-col justify-center items-center gap-5">
                 <div className="h-20 w-30 rounded-full bg-[#394508]"></div>
                 <span className="text-[#394508] mb-[-25px]">some random text</span>
               </div>
             </div>
           </div>
 
-          <div className="self-stretch flex flex-col justify-center items-center m-10 gap-5 border-2 border-amber-200">
+          <div className="self-stretch flex flex-col justify-center items-center m-5 mt-10 lg:m-10 gap-5 border-2 border-amber-200">
             <span className="text-[40px] text-[#394508]">The Most Reliable App</span>
             <div className="self-stretch grid grid-cols-2  gap-5">
               <div className="flex flex-col justify-center gap-3">
-                <div className="h-75 bg-zinc-400 rounded-lg"></div>
+                <div className="h-110 bg-zinc-400 rounded-lg"></div>
                 <div className="flex flex-col">
                   <span className="text-xs text-[#394508]">Scale Your Team, Not Your Card Expenses</span>
                   <span className="text-xs text-[#5d5d5d]">Issue virtual and physical cards at no additional cost to support teams of any size.</span>
                 </div>
               </div>
               <div className="flex flex-col justify-center gap-3">
-                <div className="h-75 bg-zinc-400 rounded-lg"></div>
+                <div className="h-110 bg-zinc-400 rounded-lg"></div>
                 <div className="flex flex-col">
                   <span className="text-xs text-[#394508]">Effortless Paper Tracking, Mobile Convenience</span>
                   <span className="text-xs text-[#5d5d5d]">Get precise control—at scale—with the ability to lock any card and restrict any type of spend.</span>
@@ -147,35 +165,35 @@ function App() {
             </div>
           </div>
 
-          <div className="self-stretch m-10 border-2 border-amber-200">
-            <div className="bg-zinc-500 h-80 rounded-lg"></div>
+          <div className="self-stretch m-5 lg:m-10 border-2 border-amber-200">
+            <div className="bg-zinc-500 h-85 rounded-lg"></div>
           </div>
 
-          <div className="self-stretch flex flex-col justify-center items-center m-10 border-2 border-amber-200">
+          <div className="self-stretch flex flex-col justify-center items-center m-5 lg:m-10 border-2 border-amber-200">
             <span className="text-[40px] text-[#394508]">First class software</span>
             <span className="text-xs text-[#5d5d5d]">Get real-time insights, seamless transactions, and advanced</span>
             <span className="text-xs text-[#5d5d5d]">tools to manage your wealth effortlessly.</span>
-            <div className="self-stretch flex justify-center items-center gap-8 mt-8">
+            <div className="self-stretch lg:flex justify-between items-center gap-8 mt-8 border-2">
               <div className="flex flex-col justify-center items-center gap-3">
-                <div className="h-35 w-45 bg-[#394508] rounded-lg flex justify-center items-center cursor-pointer hover:-translate-y-3 transition duration-500 \">
+                <div className="h-60 w-75 bg-[#394508] rounded-lg flex justify-center items-center cursor-pointer hover:-translate-y-3 transition duration-500 \">
                   <div className="w-20 h-17 border-2 border-[#d1fc9c] rounded-lg"></div>
                 </div>
                 <span className="text-xs font-medium">Safe Storage</span>
               </div>
               <div className="flex flex-col justify-center items-center gap-3">
-                <div className="h-35 w-45 bg-[#394508] rounded-lg flex justify-center items-center cursor-pointer hover:-translate-y-3 transition duration-500 \">
+                <div className="h-60 w-75 bg-[#394508] rounded-lg flex justify-center items-center cursor-pointer hover:-translate-y-3 transition duration-500 \">
                   <div className="w-20 h-17 border-2 border-[#d1fc9c] rounded-lg"></div>
                 </div>
                 <span className="text-xs font-medium">Safe Storage</span>
               </div>
               <div className="flex flex-col justify-center items-center gap-3">
-                <div className="h-35 w-45 bg-[#394508] rounded-lg flex justify-center items-center cursor-pointer hover:-translate-y-3 transition duration-500 \">
+                <div className="h-60 w-75 bg-[#394508] rounded-lg flex justify-center items-center cursor-pointer hover:-translate-y-3 transition duration-500 \">
                   <div className="w-20 h-17 border-2 border-[#d1fc9c] rounded-lg"></div>
                 </div>
                 <span className="text-xs font-medium">Safe Storage</span>
               </div>
               <div className="flex flex-col justify-center items-center gap-3">
-                <div className="h-35 w-45 bg-[#394508] rounded-lg flex justify-center items-center cursor-pointer hover:-translate-y-3 transition duration-500 \">
+                <div className="h-60 w-75 bg-[#394508] rounded-lg flex justify-center items-center cursor-pointer hover:-translate-y-3 transition duration-500 \">
                   <div className="w-20 h-17 border-2 border-[#d1fc9c] rounded-lg"></div>
                 </div>
                 <span className="text-xs font-medium">Safe Storage</span>
@@ -183,9 +201,9 @@ function App() {
             </div>
           </div>
 
-          <div className="self-stretch relative m-10 border-2 border-amber-200">
-            <div className="bg-zinc-500 h-80 rounded-lg"></div>
-            <div className="absolute flex flex-col top-30 left-10">
+          <div className="self-stretch relative m-5 lg:m-10 border-2 border-amber-200">
+            <div className="bg-zinc-500 h-85 rounded-lg"></div>
+            <div className="absolute flex flex-col bottom-12 left-10">
               <span className="text-3xl text-white">Download Docusy and</span>
               <span className="text-3xl text-white">manage everything </span>
               <span className="text-3xl text-white">from your phone.</span>
@@ -193,7 +211,7 @@ function App() {
             </div>
           </div>
 
-          <footer className="self-stretch mt-10 bg-zinc-200 flex justify-between gap-15">
+          <footer className="self-stretch bg-zinc-200 flex justify-between gap-15">
             <div className="flex flex-col gap-35 m-10">
               <div className="w-10 h-10 rounded-full bg-black"></div>
               <span className="font-bold text-4xl">Docusy</span>

@@ -7,9 +7,9 @@
   @apply flex-1 flex flex-col gap-3 justify-center h-30 bg-[#619111] rounded-xs text-sm hover:bg-[#d1fc9c] cursor-pointer;
 }
 
-.CardFirst {
+/* .CardFirst {
   @apply
-}
+} */
 
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);

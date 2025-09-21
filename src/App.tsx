@@ -4,7 +4,7 @@ function App() {
   return (
     <div className="flex">
 
-      <div className="flex-[1_0_0] bg-[#384408] h-screen">
+      <div className="w-1/3 sticky top-0 bg-[#384408] h-screen">
         <div className="pt-5 pl-8 pr-16 flex flex-col gap-10">
           <nav className="flex justify-between">
             <div className="flex items-center gap-3">
@@ -55,9 +55,9 @@ function App() {
         </div>
       </div>
 
-      <div className="flex-[2_0_0]">
+      <div className="w-2/3">
 
-        <div className="self-stretch flex flex-col justify-center items-center gap-10 border-2 border-black">
+        <div className="self-stretch flex flex-col justify-center items-center gap-10">
 
           <div className="self-stretch flex flex-col justify-center items-center gap-10 m-10 border-2 border-amber-200">
             <div className="self-stretch relative">
@@ -193,7 +193,26 @@ function App() {
             </div>
           </div>
 
-          <div className="self-stretch mt-10 bg-zinc-400 flex flex-col"></div>
+          <footer className="self-stretch mt-10 bg-zinc-200 flex justify-between gap-15">
+            <div className="flex flex-col gap-35 m-10">
+              <div className="w-10 h-10 rounded-full bg-black"></div>
+              <span className="font-bold text-4xl">Docusy</span>
+            </div>
+            <div className="flex flex-col gap-25 m-10">
+              <ul className="list-none flex flex-col mr-20">
+                <li className="text-xs text-[#5d5d5d] mb-3">Contact</li>
+                <li className="text-xs hover:text-[#5d5d5d] cursor-pointer transition duration-300">Email</li>
+                <li className="text-xs hover:text-[#5d5d5d] cursor-pointer transition duration-300">App Store</li>
+                <li className="text-xs hover:text-[#5d5d5d] cursor-pointer transition duration-300">Phone</li>
+                <li className="text-xs hover:text-[#5d5d5d] cursor-pointer transition duration-300">Linkdin</li>
+              </ul>
+              <ul className="list-none flex flex-col mr-10">
+                <li className="text-xs hover:text-[#5d5d5d] cursor-pointer transition duration-300">Terms & consitions</li>
+                <li className="text-xs hover:text-[#5d5d5d] cursor-pointer transition duration-300">Privacy</li>
+              </ul>
+            </div>
+
+          </footer>
 
         </div>
 

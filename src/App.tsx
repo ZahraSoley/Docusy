@@ -6,7 +6,7 @@ function App() {
 
   const isMobile = useMediaQuery({ maxWidth: 640 });
   const isTablet = useMediaQuery({ minWidth: 641, maxWidth: 1023 });
-  const isDesktop = useMediaQuery({ minWidth: 1024 });
+  // const isDesktop = useMediaQuery({ minWidth: 1024 });
 
   return (
     <div className="flex flex-col lg:flex-row bg-[#384408] overflow-hidden">

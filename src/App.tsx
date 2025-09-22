@@ -9,7 +9,7 @@ function App() {
   const isDesktop = useMediaQuery({ minWidth: 1024 });
 
   return (
-    <div className="flex flex-col lg:flex-row bg-[#384408] ">
+    <div className="flex flex-col lg:flex-row bg-[#384408] overflow-hidden">
 
       <div className="box-border w-full lg:flex-[1_1_25%] lg:max-w-2/5 lg:sticky top-0 py-5 px-5 mb-2 lg:px-10 lg:pr-15 lg:mr-15 lg:h-screen">
 
@@ -70,20 +70,21 @@ function App() {
 
           <div className="self-stretch flex flex-col justify-center items-center m-5 lg:m-10 border-2 border-amber-200">
             <div className="self-stretch relative">
-              <div className="w-full h-60 lg:h-160 bg-zinc-600 rounded-3xl"></div>
+              <div className="w-full aspect-[3/2] lg:h-[70vh] bg-zinc-600 rounded-3xl"></div>
               {/* *************************************************************************** */}
-              <div className="hidden lg:block absolute bg-[#8596760 w-75 h-20 rounded-full opacity-90 flex items-center top-40 left-15">
-                <div className="w-15 h-15 bg-[#d2fd9c] rounded-full opacity-100 ml-2"></div>
-                <span className="text-2xl text-white ml-2">some text here!</span>
+              <div className="hidden absolute bg-[#96b472] w-[25%] h-[12%] rounded-full lg:flex items-center top-[20%] left-[5%]">
+                <div className="h-[80%] aspect-square bg-[#d2fd9c] rounded-full opacity-100 ml-2"></div>
+                <span className="lg:text-md text-white ml-2">some text here!</span>
               </div>
-              <div className="hidden lg:block  absolute bg-[#8596760 w-75 h-20 rounded-full opacity-90 flex items-center top-20 right-20">
-                <div className="w-15 h-15 bg-[#d2fd9c] rounded-full opacity-100 ml-2"></div>
-                <span className="text-2xl text-white ml-2">some text here!</span>
+              <div className="hidden absolute bg-[#96b472] w-[25%] h-[12%] rounded-full lg:flex items-center left-[35%] bottom-[12%]">
+                <div className="h-[80%] aspect-square bg-[#d2fd9c] rounded-full opacity-100 ml-2"></div>
+                <span className="lg:text-md text-white ml-2">some text here!</span>
               </div>
-              <div className="hidden lg:block absolute bg-[#8596760 w-75 h-20 rounded-full opacity-90 flex items-center bottom-20 left-100">
-                <div className="w-15 h-15 bg-[#d2fd9c] rounded-full opacity-100 ml-2"></div>
-                <span className="text-2xl text-white ml-2">some text here!</span>
+              <div className="hidden absolute bg-[#96b472] w-[25%] h-[12%] rounded-full lg:flex items-center top-[10%] right-[10%]">
+                <div className="h-[80%] aspect-square bg-[#d2fd9c] rounded-full opacity-100 ml-2"></div>
+                <span className="lg:text-md text-white ml-2">some text here!</span>
               </div>
+
             </div>
             {isMobile || isTablet ?
               <div className="flex flex-col gap-10 mt-5">
@@ -125,38 +126,38 @@ function App() {
             <span className="text-3xl lg:text-5xl text-[#394508] mb-3">Get more done in a week</span>
             <span className="text-xs text-[#5d5d5d]">Maximize your productivity with smarter tools designed to </span>
             <span className="text-xs text-[#5d5d5d]">streamline your workflow to automate tasks, stay organized</span>
-            <div className="lg:w-3/4 grid lg:grid-cols-2 w-full gap-4 mt-7">
-              <div className="h-55 bg-[#d2fd9c] rounded-lg flex flex-col justify-center items-center gap-5">
+            <div className="w-full grid lg:grid-cols-2  gap-4 mt-7">
+              <div className="aspect-[6/4] bg-[#d2fd9c] rounded-lg flex flex-col justify-center items-center gap-5">
                 <div className="h-20 w-30 rounded-full bg-[#394508]"></div>
                 <span className="text-[#394508] mb-[-25px]">some random text</span>
               </div>
-              <div className="h-55 bg-[#d2fd9c] rounded-lg flex flex-col justify-center items-center gap-5">
+              <div className="aspect-[6/4] bg-[#d2fd9c] rounded-lg flex flex-col justify-center items-center gap-5">
                 <div className="h-20 w-30 rounded-full bg-[#394508]"></div>
                 <span className="text-[#394508] mb-[-25px]">some random text</span>
               </div>
-              <div className="h-55 bg-[#d2fd9c] rounded-lg flex flex-col justify-center items-center gap-5">
+              <div className="aspect-[6/4] bg-[#d2fd9c] rounded-lg flex flex-col justify-center items-center gap-5">
                 <div className="h-20 w-30 rounded-full bg-[#394508]"></div>
                 <span className="text-[#394508] mb-[-25px]">some random text</span>
               </div>
-              <div className="h-55 bg-[#d2fd9c] rounded-lg flex flex-col justify-center items-center gap-5">
+              <div className="aspect-[6/4] bg-[#d2fd9c] rounded-lg flex flex-col justify-center items-center gap-5">
                 <div className="h-20 w-30 rounded-full bg-[#394508]"></div>
                 <span className="text-[#394508] mb-[-25px]">some random text</span>
               </div>
             </div>
           </div>
 
-          <div className="self-stretch flex flex-col justify-center items-center m-5 mt-10 lg:m-10 gap-5 border-2 border-amber-200">
-            <span className="text-[40px] text-[#394508]">The Most Reliable App</span>
-            <div className="self-stretch grid grid-cols-2  gap-5">
+          <div className="self-stretch flex flex-col justify-center items-center m-5 lg:m-10 gap-5 border-2 border-amber-200">
+            <span className="text-3xl lg:text-[40px] text-[#394508]">The Most Reliable App</span>
+            <div className="self-stretch grid lg:grid-cols-2 gap-5">
               <div className="flex flex-col justify-center gap-3">
-                <div className="h-110 bg-zinc-400 rounded-lg"></div>
+                <div className="aspect-[5/4] bg-zinc-400 rounded-lg"></div>
                 <div className="flex flex-col">
                   <span className="text-xs text-[#394508]">Scale Your Team, Not Your Card Expenses</span>
                   <span className="text-xs text-[#5d5d5d]">Issue virtual and physical cards at no additional cost to support teams of any size.</span>
                 </div>
               </div>
               <div className="flex flex-col justify-center gap-3">
-                <div className="h-110 bg-zinc-400 rounded-lg"></div>
+                <div className="aspect-[5/4] bg-zinc-400 rounded-lg"></div>
                 <div className="flex flex-col">
                   <span className="text-xs text-[#394508]">Effortless Paper Tracking, Mobile Convenience</span>
                   <span className="text-xs text-[#5d5d5d]">Get precise control—at scale—with the ability to lock any card and restrict any type of spend.</span>
@@ -166,34 +167,34 @@ function App() {
           </div>
 
           <div className="self-stretch m-5 lg:m-10 border-2 border-amber-200">
-            <div className="bg-zinc-500 h-85 rounded-lg"></div>
+            <div className="bg-zinc-500 aspect-[7/5] lg:aspect-[2/1] rounded-lg"></div>
           </div>
 
           <div className="self-stretch flex flex-col justify-center items-center m-5 lg:m-10 border-2 border-amber-200">
             <span className="text-[40px] text-[#394508]">First class software</span>
             <span className="text-xs text-[#5d5d5d]">Get real-time insights, seamless transactions, and advanced</span>
             <span className="text-xs text-[#5d5d5d]">tools to manage your wealth effortlessly.</span>
-            <div className="self-stretch lg:flex justify-between items-center gap-8 mt-8 border-2">
-              <div className="lg:w-1/4 flex flex-col justify-center items-center gap-3">
-                <div className="w-full bg-[#394508] max-h-60 max-w-75 rounded-lg flex justify-center items-center cursor-pointer hover:-translate-y-3 transition duration-500 \">
+            <div className="self-stretch flex flex-col lg:flex-row justify-between items-center gap-8 mt-8 border-2">
+              <div className="lg:w-1/4 w-1/2 flex flex-col justify-center items-center gap-3">
+                <div className="w-full aspect-[4/3] bg-[#394508] max-h-60 max-w-75 rounded-lg flex justify-center items-center cursor-pointer hover:-translate-y-3 transition duration-500 \">
                   <div className="w-20 h-17 border-2 border-[#d1fc9c] rounded-lg"></div>
                 </div>
                 <span className="text-xs font-medium">Safe Storage</span>
               </div>
-              <div className="lg:w-1/4 flex flex-col justify-center items-center gap-3">
-                <div className="w-full bg-[#394508] max-h-60 max-w-75 rounded-lg flex justify-center items-center cursor-pointer hover:-translate-y-3 transition duration-500 \">
+              <div className="lg:w-1/4 w-1/2 flex flex-col justify-center items-center gap-3">
+                <div className="w-full aspect-[4/3] bg-[#394508] max-h-60 max-w-75 rounded-lg flex justify-center items-center cursor-pointer hover:-translate-y-3 transition duration-500 \">
                   <div className="w-20 h-17 border-2 border-[#d1fc9c] rounded-lg"></div>
                 </div>
                 <span className="text-xs font-medium">Safe Storage</span>
               </div>
-              <div className="lg:w-1/4 flex flex-col justify-center items-center gap-3">
-                <div className="w-full bg-[#394508] max-h-60 max-w-75 rounded-lg flex justify-center items-center cursor-pointer hover:-translate-y-3 transition duration-500 \">
+              <div className="lg:w-1/4 w-1/2 flex flex-col justify-center items-center gap-3">
+                <div className="w-full aspect-[4/3] bg-[#394508] max-h-60 max-w-75 rounded-lg flex justify-center items-center cursor-pointer hover:-translate-y-3 transition duration-500 \">
                   <div className="w-20 h-17 border-2 border-[#d1fc9c] rounded-lg"></div>
                 </div>
                 <span className="text-xs font-medium">Safe Storage</span>
               </div>
-              <div className="lg:w-1/4 flex flex-col justify-center items-center gap-3">
-                <div className="w-full bg-[#394508] max-h-60 max-w-75 rounded-lg flex justify-center items-center cursor-pointer hover:-translate-y-3 transition duration-500 \">
+              <div className="lg:w-1/4 w-1/2 flex flex-col justify-center items-center gap-3">
+                <div className="w-full aspect-[4/3] bg-[#394508] max-h-60 max-w-75 rounded-lg flex justify-center items-center cursor-pointer hover:-translate-y-3 transition duration-500 \">
                   <div className="w-20 h-17 border-2 border-[#d1fc9c] rounded-lg"></div>
                 </div>
                 <span className="text-xs font-medium">Safe Storage</span>
@@ -202,8 +203,8 @@ function App() {
           </div>
 
           <div className="self-stretch relative m-5 lg:m-10 border-2 border-amber-200">
-            <div className="bg-zinc-500 h-85 rounded-lg"></div>
-            <div className="absolute flex flex-col bottom-12 left-10">
+            <div className="bg-zinc-500 aspect-[7/5] lg:aspect-[2/1] rounded-lg"></div>
+            <div className="absolute flex flex-col bottom-12 lg:left-10 left-5">
               <span className="text-3xl text-white">Download Docusy and</span>
               <span className="text-3xl text-white">manage everything </span>
               <span className="text-3xl text-white">from your phone.</span>

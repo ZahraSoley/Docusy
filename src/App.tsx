@@ -89,31 +89,31 @@ function App() {
             {isMobile || isTablet ?
               <div className="flex flex-col gap-10 mt-5">
                 <div className="flex flex-col items-center justify-center">
-                  <span className="text-xl">we do something very good </span>
-                  <span className="text-xl mt-[-5px]">and excelent</span>
+                  <span className="text-lg md:text-2xl">we do something very good </span>
+                  <span className="text-lg md:text-2xl mt-[-5px]">and excelent</span>
                 </div>
-                <div className="flex flex-col justify-center items-center gap-8 lg:grid-cols-5 list-none text-[#619111] pt-2">
-                  <div className="flex gap-3">
+                <div className="flex flex-col justify-center items-center gap-8 lg:grid-cols-5 text-xs lg:text-md text-[#619111] pt-2">
+                  <div className="flex gap-3 md:gap-6">
                     <li className="flex items-center justify-center gap-1">
-                      <div className="w-4 h-4 rounded-full bg-[#619111]"></div>
+                      <div className="w-4 aspect-square rounded-full bg-[#619111]"></div>
                       <span>some thing</span>
                     </li>
                     <li className="flex items-center justify-center gap-1">
-                      <div className="w-4 h-4 rounded-full bg-[#619111]"></div>
+                      <div className="w-4 aspect-square rounded-full bg-[#619111]"></div>
                       <span>some thing</span>
                     </li>
                   </div>
-                  <div className="flex gap-3">
+                  <div className="flex gap-3 md:gap-6">
                     <li className="flex items-center justify-center gap-1">
-                      <div className="w-4 h-4 rounded-full bg-[#619111]"></div>
+                      <div className="w-4 aspect-square rounded-full bg-[#619111]"></div>
                       <span>some thing</span>
                     </li>
                     <li className="flex items-center justify-center gap-1">
-                      <div className="w-4 h-4 rounded-full bg-[#619111]"></div>
+                      <div className="w-4 aspect-square rounded-full bg-[#619111]"></div>
                       <span>some thing</span>
                     </li>
                     <li className="flex items-center justify-center gap-1">
-                      <div className="w-4 h-4 rounded-full bg-[#619111]"></div>
+                      <div className="w-4 aspect-square rounded-full bg-[#619111]"></div>
                       <span>some thing</span>
                     </li>
                   </div>
@@ -123,7 +123,7 @@ function App() {
           </div>
 
           <div className="self-stretch flex flex-col items-center justify-center m-5 lg:m-10 lg:mt-0 border-2 border-amber-200">
-            <span className="text-3xl lg:text-5xl text-[#394508] mb-3">Get more done in a week</span>
+            <span className="text-xl md:text-3xl lg:text-[40px] text-[#394508] mb-3">Get more done in a week</span>
             <span className="text-xs text-[#5d5d5d]">Maximize your productivity with smarter tools designed to </span>
             <span className="text-xs text-[#5d5d5d]">streamline your workflow to automate tasks, stay organized</span>
             <div className="w-full grid lg:grid-cols-2  gap-4 mt-7">
@@ -147,7 +147,7 @@ function App() {
           </div>
 
           <div className="self-stretch flex flex-col justify-center items-center m-5 lg:m-10 gap-5 border-2 border-amber-200">
-            <span className="text-3xl lg:text-[40px] text-[#394508]">The Most Reliable App</span>
+            <span className="text-xl md:text-3xl lg:text-[40px] text-[#394508]">The Most Reliable App</span>
             <div className="self-stretch grid lg:grid-cols-2 gap-5">
               <div className="flex flex-col justify-center gap-3">
                 <div className="aspect-[5/4] bg-zinc-400 rounded-lg"></div>
@@ -167,11 +167,12 @@ function App() {
           </div>
 
           <div className="self-stretch m-5 lg:m-10 border-2 border-amber-200">
-            <div className="bg-zinc-500 aspect-[7/5] lg:aspect-[2/1] rounded-lg"></div>
+            <div className="bg-zinc-500 aspect-[3/2] lg:aspect-[2/1] rounded-lg"></div>
           </div>
 
           <div className="self-stretch flex flex-col justify-center items-center m-5 lg:m-10 border-2 border-amber-200">
-            <span className="text-[40px] text-[#394508]">First class software</span>
+            <span className="text-xl md:text-3xl lg:text-[40px] text-[#394508]">First class software</span>
+            {/* *****************************************************************************************************88 */}
             <span className="text-xs text-[#5d5d5d]">Get real-time insights, seamless transactions, and advanced</span>
             <span className="text-xs text-[#5d5d5d]">tools to manage your wealth effortlessly.</span>
             <div className="self-stretch flex flex-col lg:flex-row justify-between items-center gap-8 mt-8 border-2">
@@ -203,21 +204,21 @@ function App() {
           </div>
 
           <div className="self-stretch relative m-5 lg:m-10 border-2 border-amber-200">
-            <div className="bg-zinc-500 aspect-[7/5] lg:aspect-[2/1] rounded-lg"></div>
-            <div className="absolute flex flex-col bottom-12 lg:left-10 left-5">
-              <span className="text-3xl text-white">Download Docusy and</span>
-              <span className="text-3xl text-white">manage everything </span>
-              <span className="text-3xl text-white">from your phone.</span>
-              <Button variant='custom' className="mt-5">Get started</Button>
+            <div className="bg-zinc-500 aspect-[3/2] lg:aspect-[2/1] rounded-lg"></div>
+            <div className="absolute flex flex-col bottom-4 md:bottom-6 left-5 lg:bottom-12 lg:left-10 ">
+              <span className="text-xl md:text-3xl text-white">Download Docusy and</span>
+              <span className="text-xl md:text-3xl text-white">manage everything </span>
+              <span className="text-xl md:text-3xl text-white">from your phone.</span>
+              <Button variant='custom' className="mt-2 md:mt-5">Get started</Button>
             </div>
           </div>
 
           <footer className="self-stretch bg-zinc-200 flex justify-between gap-15">
-            <div className="flex flex-col gap-35 m-10">
-              <div className="w-10 h-10 rounded-full bg-black"></div>
-              <span className="font-bold text-4xl">Docusy</span>
+            <div className="flex flex-col justify-between m-10 mr-0">
+              <div className="w-6 md:w-10 aspect-square rounded-full bg-black"></div>
+              <span className="font-bold text-xl md:text-4xl">Docusy</span>
             </div>
-            <div className="flex flex-col gap-25 m-10">
+            <div className="flex flex-col justify-between m-10 ml-0">
               <ul className="list-none flex flex-col mr-20">
                 <li className="text-xs text-[#5d5d5d] mb-3">Contact</li>
                 <li className="text-xs hover:text-[#5d5d5d] cursor-pointer transition duration-300">Email</li>
@@ -225,7 +226,7 @@ function App() {
                 <li className="text-xs hover:text-[#5d5d5d] cursor-pointer transition duration-300">Phone</li>
                 <li className="text-xs hover:text-[#5d5d5d] cursor-pointer transition duration-300">Linkdin</li>
               </ul>
-              <ul className="list-none flex flex-col mr-10">
+              <ul className="list-none flex flex-col mt-20">
                 <li className="text-xs hover:text-[#5d5d5d] cursor-pointer transition duration-300">Terms & consitions</li>
                 <li className="text-xs hover:text-[#5d5d5d] cursor-pointer transition duration-300">Privacy</li>
               </ul>

@@ -4,12 +4,12 @@
 @custom-variant dark (&:is(.dark *));
 
 .CardLeft {
-  @apply flex-1 aspect-[6/7] flex flex-col gap-3 justify-center h-[15vh] lg:h-[20vh] bg-[#619111] rounded-sm text-sm hover:bg-[#d1fc9c] cursor-pointer;
+  @apply flex-1 aspect-[6/7] flex flex-col gap-3 justify-center h-[15vh] lg:h-[20vh] bg-[#619111] rounded-sm text-xs lg:text-sm hover:bg-[#d1fc9c] cursor-pointer;
 }
 
-/* .CardFirst {
-  @apply
-} */
+* {
+  scroll-behavior: smooth
+}
 
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);

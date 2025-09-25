@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { useMediaQuery } from "react-responsive";
-import { ShieldCheckIcon } from "@heroicons/react/24/solid";
-import { ArchiveBoxIcon, ChatBubbleBottomCenterTextIcon, GlobeAsiaAustraliaIcon, InboxStackIcon, PencilSquareIcon, Square2StackIcon } from "@heroicons/react/24/outline";
+import { AcademicCapIcon, BriefcaseIcon, IdentificationIcon, ShieldCheckIcon } from "@heroicons/react/24/solid";
+import { ChatBubbleBottomCenterTextIcon, GlobeAsiaAustraliaIcon, InboxStackIcon, PencilSquareIcon } from "@heroicons/react/24/outline";
 import { DocumentDuplicateIcon } from "@heroicons/react/24/outline";
 import { DocumentArrowDownIcon } from "@heroicons/react/24/outline";
 
@@ -26,7 +26,7 @@ function App() {
   }
 
   return (
-    <div className="flex flex-col lg:flex-row bg-[#384408] ">
+    <div className="flex flex-col lg:flex-row bg-[#384408] overflow-hidden">
 
       <div className="box-border w-full lg:flex-[1_1_30%] lg:max-w-2/5 lg:sticky top-0 bottom-0 py-5 px-5 mb-2 lg:px-8 lg:mr-15 lg:h-screen border-2 border-amber-200">
 
@@ -99,19 +99,23 @@ function App() {
             <div className="self-stretch relative">
               <div className="w-full aspect-[2/1]  bg-zinc-600 rounded-3xl"></div>
               {/* *************************************************************************** */}
-              <div className="hidden absolute bg-[#96b472] w-[25%] h-[12%] rounded-full md:flex items-center top-[20%] left-[5%]">
+              <div className="hidden absolute bg-[#96b472] min-w-[25%]  h-[12%] rounded-full md:flex items-center top-[20%] left-[5%]">
                 <div className="h-[80%] aspect-square bg-[#d2fd9c] rounded-full flex justify-center items-center ml-2">
-                  <ShieldCheckIcon className="text-[#394508] w-4/5"></ShieldCheckIcon>
+                  <AcademicCapIcon className="text-[#394508] w-3/4"></AcademicCapIcon>
                 </div>
-                <span className="lg:text-md text-white ml-2">Truly Private</span>
+                <span className="text-sm xl:text-lg text-white mx-2">Students & Freelancers</span>
               </div>
-              <div className="hidden absolute bg-[#96b472] w-[25%] h-[12%] rounded-full lg:flex items-center left-[35%] bottom-[12%]">
-                <div className="h-[80%] aspect-square bg-[#d2fd9c] rounded-full opacity-100 ml-2"></div>
-                <span className="lg:text-md text-white ml-2">Multilingual OCR</span>
+              <div className="hidden absolute bg-[#96b472] min-w-[25%] h-[12%] rounded-full md:flex items-center left-[35%] bottom-[12%]">
+                <div className="h-[80%] aspect-square bg-[#d2fd9c] rounded-full flex justify-center items-center ml-2">
+                  <IdentificationIcon className="text-[#394508] w-3/4"></IdentificationIcon>
+                </div>
+                <span className="text-sm xl:text-lg text-white mx-2">Visa & Banking</span>
               </div>
-              <div className="hidden absolute bg-[#96b472] w-[25%] h-[12%] rounded-full lg:flex items-center top-[10%] right-[10%]">
-                <div className="h-[80%] aspect-square bg-[#d2fd9c] rounded-full opacity-100 ml-2"></div>
-                <span className="lg:text-md text-white ml-2">Built for Heavy Docs</span>
+              <div className="hidden absolute bg-[#96b472] min-w-[25%] h-[12%] rounded-full md:flex items-center top-[10%] right-[10%]">
+                <div className="h-[80%] aspect-square bg-[#d2fd9c] rounded-full flex justify-center items-center ml-2">
+                  <BriefcaseIcon className="text-[#394508] w-3/4"></BriefcaseIcon>
+                </div>
+                <span className="text-sm xl:text-lg text-white mx-2">Professionals & SMBs</span>
               </div>
 
             </div>
@@ -158,7 +162,7 @@ function App() {
             <span className="text-xl md:text-3xl lg:text-[40px] text-[#394508] mb-3">Get more done with one App</span>
             <span className="text-xs text-[#5d5d5d]">Maximize your productivity with smarter tools designed to </span>
             <span className="text-xs text-[#5d5d5d]">streamline your workflow to automate tasks, stay organized</span>
-            <div className="w-full grid lg:grid-cols-2 gap-4 mt-7">
+            <div className="w-full xl:w-3/4 grid lg:grid-cols-2 gap-4 mt-7">
               <div className=" text-[#394508] h-full aspect-[6/4] bg-[#d2fd9c] rounded-lg flex flex-col justify-center items-center md:gap-5 gap-3  lg:p-2">
                 <DocumentArrowDownIcon className="lg:w-20 md:w-40 w-15 "></DocumentArrowDownIcon>
                 <div className="flex flex-col items-center lg:text-sm md:text-3xl">
@@ -209,7 +213,7 @@ function App() {
             <span className="text-xl md:text-3xl lg:text-[40px] text-[#394508]">The Most Reliable App</span>
             <div className="self-stretch grid lg:grid-cols-3 lg:gap-5 gap-10 border-2 border-rose-300">
               <div className="flex flex-col justify-center gap-3">
-                <div className="lg:aspect-[5/4] aspect-[3/2] bg-[#394508] rounded-lg flex justify-center items-center">
+                <div className="xl:aspect-[3/2] lg:aspect-[5/4] aspect-[3/2] bg-[#394508] rounded-lg flex justify-center items-center">
                   <ShieldCheckIcon className="lg:w-32 md:w-80 w-40 text-[#d1fc9c]"></ShieldCheckIcon>
                 </div>
                 <div className="flex flex-col lg:aspect-[2/1]">
@@ -218,7 +222,7 @@ function App() {
                 </div>
               </div>
               <div className="flex flex-col justify-center gap-3">
-                <div className="lg:aspect-[5/4] aspect-[3/2] bg-[#394508] rounded-lg flex justify-center items-center">
+                <div className="xl:aspect-[3/2] lg:aspect-[5/4] aspect-[3/2] bg-[#394508] rounded-lg flex justify-center items-center">
                   <GlobeAsiaAustraliaIcon className="lg:w-32 md:w-80 w-40 text-[#d1fc9c]"></GlobeAsiaAustraliaIcon>
                 </div>
                 <div className="flex flex-col lg:aspect-[2/1]">
@@ -227,7 +231,7 @@ function App() {
                 </div>
               </div>
               <div className="flex flex-col justify-center gap-3">
-                <div className="lg:aspect-[5/4] aspect-[3/2] bg-[#394508] rounded-lg flex justify-center items-center">
+                <div className="xl:aspect-[3/2] lg:aspect-[5/4] aspect-[3/2] bg-[#394508] rounded-lg flex justify-center items-center">
                   <InboxStackIcon className="lg:w-32 md:w-80 w-40 text-[#d1fc9c]"></InboxStackIcon>
                 </div>
                 <div className="flex flex-col lg:aspect-[2/1]">

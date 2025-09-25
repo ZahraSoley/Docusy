@@ -1,9 +1,10 @@
 import { Button } from "@/components/ui/button"
 import { useMediaQuery } from "react-responsive";
 import { ShieldCheckIcon } from "@heroicons/react/24/solid";
-import { ChatBubbleBottomCenterTextIcon, GlobeAsiaAustraliaIcon, PencilSquareIcon, Square2StackIcon } from "@heroicons/react/24/outline";
+import { ArchiveBoxIcon, ChatBubbleBottomCenterTextIcon, GlobeAsiaAustraliaIcon, InboxStackIcon, PencilSquareIcon, Square2StackIcon } from "@heroicons/react/24/outline";
 import { DocumentDuplicateIcon } from "@heroicons/react/24/outline";
 import { DocumentArrowDownIcon } from "@heroicons/react/24/outline";
+
 // import { useRef } from "react";
 
 
@@ -25,11 +26,11 @@ function App() {
   }
 
   return (
-    <div className="flex flex-col lg:flex-row bg-[#384408]">
+    <div className="flex flex-col lg:flex-row bg-[#384408] ">
 
-      <div className="box-border w-full lg:flex-[1_1_25%] lg:max-w-2/5 lg:sticky top-0 py-5 px-5 mb-2 lg:px-10 lg:pr-15 lg:mr-15 lg:h-screen">
+      <div className="box-border w-full lg:flex-[1_1_30%] lg:max-w-2/5 lg:sticky top-0 bottom-0 py-5 px-5 mb-2 lg:px-8 lg:mr-15 lg:h-screen border-2 border-amber-200">
 
-        <div className=" flex flex-col gap-10">
+        <div className=" flex flex-col gap-8">
           <nav className="flex justify-between">
             <div className="flex items-center gap-3">
               <div className="w-7 h-7 rounded-full bg-white"></div>
@@ -37,7 +38,7 @@ function App() {
             </div>
             <Button variant='custom'>Get started</Button>
           </nav>
-          <div className="flex flex-col self-stretch text-3xl lg:text-4xl text-white">
+          <div className="flex flex-col self-stretch text-3xl lg:text-3xl text-white">
             <span >Scan, Edit & Share PDFs</span>
             <span >Secure, Multilingual,</span>
             <span className="text-[#d2fd9c]">Made for You</span>
@@ -45,7 +46,7 @@ function App() {
           </div>
           <div className="flex flex-col gap-4">
             <span className="text-[#d2fd9c] text-xs font-medium">Our offerings</span>
-            <div className="flex gap-2">
+            <div className="self-stretch grid grid-cols-3 gap-2">
               <button
                 className='CardLeft'
                 onClick={() => handleScroll('sectionOne')}
@@ -83,21 +84,20 @@ function App() {
               className="text-[#d2fd9c] text-xs font-medium hover:underline cursor-pointer"
               onClick={() => handleScroll('footer')}
             >Contact</li>
-            <li className="text-[#d2fd9c] text-xs font-medium hover:underline cursor-pointer">Social</li>
-            <li className="text-[#d2fd9c] text-xs font-medium hover:underline cursor-pointer">Address</li>
+            <li className="text-[#d2fd9c] text-xs font-medium hover:underline cursor-pointer">App Store</li>
             <li className="text-[#d2fd9c] text-xs font-medium hover:underline cursor-pointer">Legal Terms</li>
           </ul>
         </div>
 
       </div>
 
-      <div className="w-full lg:flex-[1_1_75%] lg:min-w-[60%] bg-white">
+      <div className="w-full lg:flex-[1_1_75%] lg:min-w-[60%] bg-white border-2 border-amber-200">
 
         <div className="self-stretch flex flex-col justify-center items-center gap-10">
 
           <div className="self-stretch flex flex-col justify-center items-center m-5 lg:m-10 border-2 border-amber-200">
             <div className="self-stretch relative">
-              <div className="w-full aspect-[3/2] lg:h-[70vh] bg-zinc-600 rounded-3xl"></div>
+              <div className="w-full aspect-[2/1]  bg-zinc-600 rounded-3xl"></div>
               {/* *************************************************************************** */}
               <div className="hidden absolute bg-[#96b472] w-[25%] h-[12%] rounded-full md:flex items-center top-[20%] left-[5%]">
                 <div className="h-[80%] aspect-square bg-[#d2fd9c] rounded-full flex justify-center items-center ml-2">
@@ -153,39 +153,50 @@ function App() {
 
           <div
             id="sectionOne"
-            // ref={sectionRef} 
+            // ref={sectionRef}
             className="self-stretch flex flex-col items-center justify-center m-5 lg:m-10 lg:mt-0 border-2 border-amber-200">
             <span className="text-xl md:text-3xl lg:text-[40px] text-[#394508] mb-3">Get more done with one App</span>
             <span className="text-xs text-[#5d5d5d]">Maximize your productivity with smarter tools designed to </span>
             <span className="text-xs text-[#5d5d5d]">streamline your workflow to automate tasks, stay organized</span>
             <div className="w-full grid lg:grid-cols-2 gap-4 mt-7">
-              <div className=" text-[#394508] aspect-[6/4] bg-[#d2fd9c] rounded-lg flex flex-col justify-center items-center md:gap-5 gap-3 md:text-lg">
-                <DocumentArrowDownIcon className="md:w-40 w-15"></DocumentArrowDownIcon>
-                <div className="flex flex-col items-center">
+              <div className=" text-[#394508] h-full aspect-[6/4] bg-[#d2fd9c] rounded-lg flex flex-col justify-center items-center md:gap-5 gap-3  lg:p-2">
+                <DocumentArrowDownIcon className="lg:w-20 md:w-40 w-15 "></DocumentArrowDownIcon>
+                <div className="flex flex-col items-center lg:text-sm md:text-3xl">
                   <span className="font-bold ">Compress PDFs</span>
-                  <span >Reduce file size without losing quality.</span>
+                  <div className="flex flex-col md:flex-row items-center justify-center lg:gap-1.5">
+                    <span >Reduce file size</span>
+                    <span >without losing quality.</span>
+                  </div>
                   <span >Email-ready in seconds.</span>
                 </div>
               </div>
-              <div className=" text-[#394508] aspect-[6/4] bg-[#d2fd9c] rounded-lg flex flex-col justify-center items-center md:gap-5 gap-3 md:text-lg">
-                <DocumentDuplicateIcon className="md:w-40 w-15"></DocumentDuplicateIcon>
-                <div className="flex flex-col items-center">
+              <div className=" text-[#394508] h-full aspect-[6/4] bg-[#d2fd9c] rounded-lg flex flex-col justify-center items-center md:gap-5 gap-3  lg:p-2">
+                <DocumentDuplicateIcon className="lg:w-20 md:w-40 w-15 "></DocumentDuplicateIcon>
+                <div className="flex flex-col items-center lg:text-sm md:text-3xl ">
                   <span className="font-bold ">Merge & Reorder</span>
-                  <span >Combine multiple documents and arrange pages easily.</span>
+                  <span >Combine multiple documents</span>
+                  <span >and arrange pages easily.</span>
                 </div>
               </div>
-              <div className=" text-[#394508] aspect-[6/4] bg-[#d2fd9c] rounded-lg flex flex-col justify-center items-center md:gap-5 gap-3 md:text-lg">
-                <PencilSquareIcon className="md:w-40 w-15"></PencilSquareIcon>
-                <div className="flex flex-col items-center">
+              <div className=" text-[#394508] h-full aspect-[6/4] bg-[#d2fd9c] rounded-lg flex flex-col justify-center items-center md:gap-5 gap-3  lg:p-2">
+                <PencilSquareIcon className="lg:w-20 md:w-40 w-15 "></PencilSquareIcon>
+                <div className="flex flex-col items-center  lg:text-sm md:text-3xl">
                   <span className="font-bold ">OCR & Edit Text</span>
-                  <span >Extract and edit text in 17 languages.</span>
+                  <div className="flex flex-col md:flex-row items-center justify-center lg:gap-1.5">
+                    <span >Extract and edit text</span>
+                    <span >in 17 languages.</span>
+                  </div>
+
                 </div>
               </div>
-              <div className=" text-[#394508] aspect-[6/4] bg-[#d2fd9c] rounded-lg flex flex-col justify-center items-center md:gap-5 gap-3 md:text-lg">
-                <ChatBubbleBottomCenterTextIcon className="md:w-40 w-15"></ChatBubbleBottomCenterTextIcon>
-                <div className="flex flex-col items-center">
+              <div className=" text-[#394508] h-full aspect-[6/4] bg-[#d2fd9c] rounded-lg flex flex-col justify-center items-center md:gap-5 gap-3  lg:p-2">
+                <ChatBubbleBottomCenterTextIcon className="lg:w-20 md:w-40 w-15 "></ChatBubbleBottomCenterTextIcon>
+                <div className="flex flex-col items-center lg:text-sm md:text-3xl">
                   <span className="font-bold ">Sign & Annotate</span>
-                  <span >Sign securely and add annotations</span>
+                  <div className="flex flex-col md:flex-row items-center justify-center lg:gap-1.5">
+                    <span >Sign securely</span>
+                    <span >and add annotations</span>
+                  </div>
                   <span >without leaving your phone.</span>
                 </div>
               </div>
@@ -196,24 +207,30 @@ function App() {
             id="sectionTwo"
             className="self-stretch flex flex-col justify-center items-center m-5 lg:m-10 gap-5 border-2 border-amber-200">
             <span className="text-xl md:text-3xl lg:text-[40px] text-[#394508]">The Most Reliable App</span>
-            <div className="self-stretch grid lg:grid-cols-3 gap-5">
+            <div className="self-stretch grid lg:grid-cols-3 lg:gap-5 gap-10 border-2 border-rose-300">
               <div className="flex flex-col justify-center gap-3">
-                <div className="aspect-[5/4] bg-zinc-400 rounded-lg"></div>
-                <div className="flex flex-col">
+                <div className="lg:aspect-[5/4] aspect-[3/2] bg-[#394508] rounded-lg flex justify-center items-center">
+                  <ShieldCheckIcon className="lg:w-32 md:w-80 w-40 text-[#d1fc9c]"></ShieldCheckIcon>
+                </div>
+                <div className="flex flex-col lg:aspect-[2/1]">
                   <span className="font-bold text-sm mb-1 text-[#394508]">Truly Private</span>
                   <span className="text-xs text-[#5d5d5d]">Everything stays on your iPhone. No servers. No tracking.</span>
                 </div>
               </div>
               <div className="flex flex-col justify-center gap-3">
-                <div className="aspect-[5/4] bg-zinc-400 rounded-lg"></div>
-                <div className="flex flex-col">
+                <div className="lg:aspect-[5/4] aspect-[3/2] bg-[#394508] rounded-lg flex justify-center items-center">
+                  <GlobeAsiaAustraliaIcon className="lg:w-32 md:w-80 w-40 text-[#d1fc9c]"></GlobeAsiaAustraliaIcon>
+                </div>
+                <div className="flex flex-col lg:aspect-[2/1]">
                   <span className="font-bold text-sm mb-1 text-[#394508]">Multilingual OCR</span>
                   <span className="text-xs text-[#5d5d5d]">Edit PDFs in 17 languages — Arabic, Farsi, Chinese, Japanese, Spanish and more.</span>
                 </div>
               </div>
               <div className="flex flex-col justify-center gap-3">
-                <div className="aspect-[5/4] bg-zinc-400 rounded-lg"></div>
-                <div className="flex flex-col">
+                <div className="lg:aspect-[5/4] aspect-[3/2] bg-[#394508] rounded-lg flex justify-center items-center">
+                  <InboxStackIcon className="lg:w-32 md:w-80 w-40 text-[#d1fc9c]"></InboxStackIcon>
+                </div>
+                <div className="flex flex-col lg:aspect-[2/1]">
                   <span className="font-bold text-sm mb-1 text-[#394508]">Built for Heavy Docs</span>
                   <span className="text-xs text-[#5d5d5d]">Handle 100+ pages smoothly with consistent quality.</span>
                 </div>

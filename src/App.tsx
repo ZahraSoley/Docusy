@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { useMediaQuery } from "react-responsive";
-import { AcademicCapIcon, BriefcaseIcon, IdentificationIcon, ShieldCheckIcon } from "@heroicons/react/24/solid";
+import { AcademicCapIcon, BriefcaseIcon, DocumentTextIcon, IdentificationIcon, ShareIcon, ShieldCheckIcon } from "@heroicons/react/24/solid";
 import { ChatBubbleBottomCenterTextIcon, GlobeAsiaAustraliaIcon, InboxStackIcon, PencilSquareIcon } from "@heroicons/react/24/outline";
 import { DocumentDuplicateIcon } from "@heroicons/react/24/outline";
 import { DocumentArrowDownIcon } from "@heroicons/react/24/outline";
@@ -157,11 +157,47 @@ function App() {
 
           <div
             id="sectionOne"
+            className="self-stretch flex flex-col justify-center items-center m-5 lg:m-10 mb-0 lg:mb-0 gap-5 border-2 border-amber-200">
+            <span className="text-xl md:text-3xl lg:text-[40px] text-[#394508]">The Most Reliable App</span>
+            <div className="self-stretch grid lg:grid-cols-3 lg:gap-5 gap-10 border-2 border-rose-300">
+              <div className="flex flex-col justify-center gap-3">
+                <div className="xl:aspect-[3/2] lg:aspect-[5/4] aspect-[3/2] bg-[#394508] rounded-lg flex justify-center items-center">
+                  <ShieldCheckIcon className="lg:w-32 md:w-60 w-40 text-[#d1fc9c]"></ShieldCheckIcon>
+                </div>
+                <div className="flex flex-col lg:aspect-[2/1]">
+                  <span className="font-bold text-sm mb-1 text-[#394508]">Truly Private</span>
+                  <span className="text-xs text-[#5d5d5d]">Everything stays on your iPhone. No servers. No tracking.</span>
+                </div>
+              </div>
+              <div className="flex flex-col justify-center gap-3">
+                <div className="xl:aspect-[3/2] lg:aspect-[5/4] aspect-[3/2] bg-[#394508] rounded-lg flex justify-center items-center">
+                  <GlobeAsiaAustraliaIcon className="lg:w-32 md:w-60 w-40 text-[#d1fc9c] stroke-[1]"></GlobeAsiaAustraliaIcon>
+                </div>
+                <div className="flex flex-col lg:aspect-[2/1]">
+                  <span className="font-bold text-sm mb-1 text-[#394508]">Multilingual OCR</span>
+                  <span className="text-xs text-[#5d5d5d]">Edit PDFs in 17 languages — Arabic, Farsi, Chinese, Japanese, Spanish and more.</span>
+                </div>
+              </div>
+              <div className="flex flex-col justify-center gap-3">
+                <div className="xl:aspect-[3/2] lg:aspect-[5/4] aspect-[3/2] bg-[#394508] rounded-lg flex justify-center items-center">
+                  <InboxStackIcon className="lg:w-32 md:w-60 w-40 text-[#d1fc9c] stroke-[1]"></InboxStackIcon>
+                </div>
+                <div className="flex flex-col lg:aspect-[2/1]">
+                  <span className="font-bold text-sm mb-1 text-[#394508]">Built for Heavy Docs</span>
+                  <span className="text-xs text-[#5d5d5d]">Handle 100+ pages smoothly with consistent quality.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            id="sectionTwo"
             // ref={sectionRef}
             className="self-stretch flex flex-col items-center justify-center m-5 lg:m-10 lg:mt-0 border-2 border-amber-200">
             <span className="text-xl md:text-3xl lg:text-[40px] text-[#394508] mb-3">Get more done with one App</span>
             <span className="text-xs text-[#5d5d5d]">Maximize your productivity with smarter tools designed to </span>
-            <span className="text-xs text-[#5d5d5d]">streamline your workflow to automate tasks, stay organized</span>
+            <span className="text-xs text-[#5d5d5d]">for you to stay organized.</span>
+            <span className="text-xs text-[#5d5d5d]">Docusy is more than a scanner — your complete PDF toolkit.</span>
             <div className="w-full xl:w-3/4 grid lg:grid-cols-2 gap-4 mt-7">
               <div className=" text-[#394508] h-full aspect-[6/4] bg-[#d2fd9c] rounded-lg flex flex-col justify-center items-center md:gap-5 gap-3  lg:p-2">
                 <DocumentArrowDownIcon className="lg:w-20 md:w-40 w-15 "></DocumentArrowDownIcon>
@@ -207,40 +243,7 @@ function App() {
             </div>
           </div>
 
-          <div
-            id="sectionTwo"
-            className="self-stretch flex flex-col justify-center items-center m-5 lg:m-10 gap-5 border-2 border-amber-200">
-            <span className="text-xl md:text-3xl lg:text-[40px] text-[#394508]">The Most Reliable App</span>
-            <div className="self-stretch grid lg:grid-cols-3 lg:gap-5 gap-10 border-2 border-rose-300">
-              <div className="flex flex-col justify-center gap-3">
-                <div className="xl:aspect-[3/2] lg:aspect-[5/4] aspect-[3/2] bg-[#394508] rounded-lg flex justify-center items-center">
-                  <ShieldCheckIcon className="lg:w-32 md:w-80 w-40 text-[#d1fc9c]"></ShieldCheckIcon>
-                </div>
-                <div className="flex flex-col lg:aspect-[2/1]">
-                  <span className="font-bold text-sm mb-1 text-[#394508]">Truly Private</span>
-                  <span className="text-xs text-[#5d5d5d]">Everything stays on your iPhone. No servers. No tracking.</span>
-                </div>
-              </div>
-              <div className="flex flex-col justify-center gap-3">
-                <div className="xl:aspect-[3/2] lg:aspect-[5/4] aspect-[3/2] bg-[#394508] rounded-lg flex justify-center items-center">
-                  <GlobeAsiaAustraliaIcon className="lg:w-32 md:w-80 w-40 text-[#d1fc9c]"></GlobeAsiaAustraliaIcon>
-                </div>
-                <div className="flex flex-col lg:aspect-[2/1]">
-                  <span className="font-bold text-sm mb-1 text-[#394508]">Multilingual OCR</span>
-                  <span className="text-xs text-[#5d5d5d]">Edit PDFs in 17 languages — Arabic, Farsi, Chinese, Japanese, Spanish and more.</span>
-                </div>
-              </div>
-              <div className="flex flex-col justify-center gap-3">
-                <div className="xl:aspect-[3/2] lg:aspect-[5/4] aspect-[3/2] bg-[#394508] rounded-lg flex justify-center items-center">
-                  <InboxStackIcon className="lg:w-32 md:w-80 w-40 text-[#d1fc9c]"></InboxStackIcon>
-                </div>
-                <div className="flex flex-col lg:aspect-[2/1]">
-                  <span className="font-bold text-sm mb-1 text-[#394508]">Built for Heavy Docs</span>
-                  <span className="text-xs text-[#5d5d5d]">Handle 100+ pages smoothly with consistent quality.</span>
-                </div>
-              </div>
-            </div>
-          </div>
+
 
           <div className="self-stretch m-5 lg:m-10 border-2 border-amber-200">
             <div className="bg-zinc-500 aspect-[3/2] lg:aspect-[2/1] rounded-lg"></div>
@@ -249,34 +252,47 @@ function App() {
           <div
             id="sectionThree"
             className="self-stretch flex flex-col justify-center items-center m-5 lg:m-10 border-2 border-amber-200">
-            <span className="text-xl md:text-3xl lg:text-[40px] text-[#394508]">First class software</span>
+            <span className="text-xl md:text-3xl lg:text-[40px] text-[#394508]">How it works</span>
             {/* *****************************************************************************************************88 */}
-            <span className="text-xs text-[#5d5d5d]">Get real-time insights, seamless transactions, and advanced</span>
-            <span className="text-xs text-[#5d5d5d]">tools to manage your wealth effortlessly.</span>
-            <div className="self-stretch flex flex-col lg:flex-row justify-between items-center gap-8 mt-8 border-2">
-              <div className="lg:w-1/4 w-1/2 flex flex-col justify-center items-center gap-3">
-                <div className="w-full aspect-[4/3] bg-[#394508] max-h-60 max-w-75 rounded-lg flex justify-center items-center cursor-pointer hover:-translate-y-3 transition duration-500 \">
-                  <div className="w-20 h-17 border-2 border-[#d1fc9c] rounded-lg"></div>
+            <span className="text-xs text-[#5d5d5d]">Transform any document into a professional PDF </span>
+            <span className="text-xs text-[#5d5d5d]">in three simple steps.</span>
+            <div className="self-stretch flex flex-col lg:flex-row justify-between items-center gap-8 lg:mx-12 mt-8 border-2">
+              <div className="lg:w-1/4 md:w-4/5 w-full flex flex-col items-center gap-3 bg-[#d1fc9c] rounded-lg hover:-translate-y-3 transition duration-500 ">
+                <div className="w-full aspect-[4/3] max-h-60 max-w-75 rounded-lg flex justify-center items-center cursor-pointer">
+                  {/* <div className="w-20 h-17 border-2 border-[#d1fc9c] rounded-lg"></div> */}
+                  <DocumentTextIcon className="w-3/5 text-[#394508]"></DocumentTextIcon>
                 </div>
-                <span className="text-xs font-medium">Safe Storage</span>
+                <span className="text-xs font-bold">1. Scan</span>
+                <div className="flex flex-col items-center mb-4">
+                  <span className="text-xs font-medium">Auto-detect edges</span>
+                  <span className="text-xs font-medium">clean filters</span>
+                  <span className="text-xs font-medium">perfect scans</span>
+                </div>
               </div>
-              <div className="lg:w-1/4 w-1/2 flex flex-col justify-center items-center gap-3">
-                <div className="w-full aspect-[4/3] bg-[#394508] max-h-60 max-w-75 rounded-lg flex justify-center items-center cursor-pointer hover:-translate-y-3 transition duration-500 \">
-                  <div className="w-20 h-17 border-2 border-[#d1fc9c] rounded-lg"></div>
+              <div className="lg:w-1/4 md:w-4/5 w-full flex flex-col items-center gap-3 bg-[#d1fc9c] rounded-lg hover:-translate-y-3 transition duration-500 ">
+                <div className="w-full aspect-[4/3] max-h-60 max-w-75 rounded-lg flex justify-center items-center cursor-pointer">
+                  {/* <div className="w-20 h-17 border-2 border-[#d1fc9c] rounded-lg"></div> */}
+                  <PencilSquareIcon className="w-3/5 text-[#394508] "></PencilSquareIcon>
                 </div>
-                <span className="text-xs font-medium">Safe Storage</span>
+                <span className="text-xs font-bold">2. Edit & Compress</span>
+                <div className="flex flex-col items-center mb-4">
+                  <span className="text-xs font-medium">OCR text</span>
+                  <span className="text-xs font-medium">reorder pages</span>
+                  <span className="text-xs font-medium">sign or shrink files</span>
+                </div>
               </div>
-              <div className="lg:w-1/4 w-1/2 flex flex-col justify-center items-center gap-3">
-                <div className="w-full aspect-[4/3] bg-[#394508] max-h-60 max-w-75 rounded-lg flex justify-center items-center cursor-pointer hover:-translate-y-3 transition duration-500 \">
-                  <div className="w-20 h-17 border-2 border-[#d1fc9c] rounded-lg"></div>
+              <div className="lg:w-1/4 md:w-4/5 w-full flex flex-col items-center gap-3 bg-[#d1fc9c] rounded-lg hover:-translate-y-3 transition duration-500 ">
+                <div className="w-full aspect-[4/3]
+                 max-h-60 max-w-75 rounded-lg flex justify-center items-center cursor-pointer">
+                  {/* <div className="w-20 h-17 border-2 border-[#d1fc9c] rounded-lg"></div> */}
+                  <ShareIcon className="w-3/5 text-[#394508]"></ShareIcon>
                 </div>
-                <span className="text-xs font-medium">Safe Storage</span>
-              </div>
-              <div className="lg:w-1/4 w-1/2 flex flex-col justify-center items-center gap-3">
-                <div className="w-full aspect-[4/3] bg-[#394508] max-h-60 max-w-75 rounded-lg flex justify-center items-center cursor-pointer hover:-translate-y-3 transition duration-500">
-                  <div className="w-20 h-17 border-2 border-[#d1fc9c] rounded-lg"></div>
+                <span className="text-xs font-bold">3. Share</span>
+                <div className="flex flex-col items-center mb-4">
+                  <span className="text-xs font-medium">Export to Mail</span>
+                  <span className="text-xs font-medium">to Files, AirDrop </span>
+                  <span className="text-xs font-medium">or your favorite apps </span>
                 </div>
-                <span className="text-xs font-medium">Safe Storage</span>
               </div>
             </div>
           </div>
